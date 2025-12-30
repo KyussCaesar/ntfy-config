@@ -1,0 +1,23 @@
+# ntfy server configuration
+# https://docs.ntfy.sh/config/
+
+# Base URL for this server (used in email links, etc.)
+base-url: "http://localhost:9876"
+
+# Listen on non-privileged port (80 requires root)
+listen-http: ":9876"
+
+# Data storage paths (these will be created by make install)
+cache-file: "~/Library/Application Support/ntfy/cache.db"
+attachment-cache-dir: "~/Library/Application Support/ntfy/attachments"
+
+# Keep messages for 12 hours (default)
+cache-duration: "12h"
+
+# Attachment limits
+attachment-total-size-limit: "1G"
+attachment-file-size-limit: "15M"
+attachment-expiry-duration: "3h"
+
+# This is a personal server, so open access is fine
+auth-default-access: "read-write"
